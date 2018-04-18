@@ -13,4 +13,17 @@ WebServiceUtil
                 .setNamespace("112").Builder();
                 
                 webservice.doSoapNet(...)
+                
+      webservice.doSoapNet(NewApi.ReplyConsultation,new RequestParams()
+                .add("type", String.valueOf(type))
+                .add("consultationCode", code)
+                .add("replyContents", reply_edit.getText().toString())
+                .add("replyUser", doctor_name.getText().toString())
+                .add("token", ""))
+                .subscribe(new MyObserve<String>() {
+                    @Override
+                    public void onNext(String value) {
+                    
+                    }
+                    });
 ```
