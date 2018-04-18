@@ -268,7 +268,7 @@ public class Webservice {
      * @throws Exception
      */
     private String dotNet(String methodName, LinkedHashMap<String, String> maps) throws Exception {
-        return dotNet(null, null, methodName, maps);
+        return dotNet(url, namespace, methodName, maps);
     }
 
     private String dotNet(String url, String namespace, String methodName, LinkedHashMap<String, String> maps) throws Exception {
